@@ -43,8 +43,37 @@ function App() {
         <hr/>
       </div>
 
+      <Modal/>
+
     </div>
   );
 }
+
+// Component 유의사항
+// 1. 이름은 대문자로 시작
+// 2. return() 안에 있는 건 태그 하나로 묶어야 함! 의미없는 <div></div> 쓰기 싫으면 <></>로 묶어도 된다~
+function Modal() {
+  return (
+    <div className='modal'>
+        <h2>제목</h2>
+        <p>날짜</p>
+        <p>상세내용</p>
+      </div>
+  );
+}
+
+/*
+* Component 쓰면 장점
+1. 관리가 수월해짐
+
+* Component 만드는 기준
+1. 반복 출현하는 html 덩어리들
+2. 자주 변경되는 html ui들
+3. 다른 페이지 만들 때도 컴포넌트로 만듦
+
+* 많이 만들면 단점
+1. state 쓸 때 복잡해짐
+*/
+
 
 export default App;
